@@ -1,0 +1,36 @@
+name: .embed_env
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - huggingface
+  - defaults
+dependencies:
+  - python=3.10
+  - pytorch=2.1
+  - pytorch-cuda=11.8
+  - cudatoolkit=11.8
+  - datasets=2.14
+  - pytest=7.4
+  - spacy=3.5
+  - sentence-transformers=2.2
+  - tqdm=4.65
+  - nltk=3.8
+  - ipykernel=6.25
+  - ipywidgets=7.8
+  - faiss=1.7
+  - gensim=4.3
+  - numpy=1.26
+  - pandas=2.0
+  - matplotlib=3.8
+  - mnist=0.2
+  - plotly=5.9
+  - seaborn=0.12
+  - nbformat=5.9
+  - umap-learn=0.5
+  - datashader=0.16
+  - bokeh=3.3
+  - holoviews=1.18
+  - scikit-image=0.20
+  - colorcet=3.0
+  - wordcloud=1.9
