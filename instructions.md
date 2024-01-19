@@ -44,8 +44,8 @@ For avoiding reproducibility and package dependency problems, you will be using 
 
 We recommend you to set up the environment with Miniconda for several reasons:
 
-1. Conda/Miniconda provides a compact and efficient way to create Python environments.
-2. Miniconda provides a minimal installation compared with traditional conda, where the most common packages for data science are automatically installed.
+1. Conda provides a compact and efficient way to create and manage Python environments.
+2. Miniconda provides a minimal installation compared with Anaconda, where the most common packages for data science are automatically installed.
 3. Even though installation with venv and pip is also possible, some packages like *faiss* can only be installed with conda.
 
 If you don't have miniconda, you can find the installation instructions [here](https://docs.conda.io/projects/miniconda/en/latest/miniconda-install.html).
