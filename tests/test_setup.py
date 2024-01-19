@@ -8,7 +8,7 @@ class TestEnvironment:
     @pytest.fixture(scope='class')
     def yaml(self, file_path: str='envs/environment.yml'):
         # Read and parse the YAML file
-        with open(file_path, 'r', encoding='utf16') as yml_file:
+        with open(file_path, 'r', encoding='utf8') as yml_file:
             yml_data = yaml.safe_load(yml_file)
             dependencies = yml_data.get("dependencies", [])
         yield dependencies
