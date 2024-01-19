@@ -32,16 +32,10 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 
 ## Roadmap
-- [ ] Finishing the Readme.md
-- [ ] Cleaning the Repo
-- [ ] Saving figures from Notebook 1.03 for fast access
-- [ ] Moving UMAP embeddings of Word2Vec, GloVe, etc to huggingface
-- [ ] Nb 1.3 add texts
-- [ ] Filling the references
+- 
 
 ## Acknowledgements
-
- - 
+- 
 
 ## Authors
 - [Mario Tormo](https://github.com/mt0rm0)
