@@ -1,0 +1,26 @@
+## The .gitignore file specifies things that git should ignore. 
+
+# VSCode
+.vscode/settings.json
+
+# Environments
+envs/*
+!envs/*.yml
+
+# Python byte-code files
+__pycache__/
+*.pyc
+src/__pycache__/*
+
+# Pytest
+.pytest_cache
+
+# Sphinx documentation
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Data
+data/*
+!data/data_description.md
