@@ -34,6 +34,7 @@ def data_logger(df: pd.DataFrame, filename: str, metadata: dict) -> None:
     df.to_parquet('../data/interim/' + filename + '.parquet', index=False)
 
     # Update JSON file with information from the dictionary
+    # json file path
     json_file_path = '../data/data.json'
 
     # Load existing JSON file or create a new one
