@@ -54,7 +54,7 @@ If you don't have miniconda, you can find the installation instructions [here](h
 
 Once you have miniconda installed, you can open the Miniconda shell. You can usually find it under the name **Anaconda prompt (miniconda)**. Alternatively, you can also use the Miniconda PowerShell. You should see the tag <kbd>(base)</kbd> leading your prompt.
 
-> **Warning**: The size of the environment could easily reach 12 or 13 Gbs in your hard disc drive, and we will also need space for downloading some additional files, so please make sure you have enough space.
+> **Warning**: The size of the environment could easily reach 10 or 11 Gbs in your hard disc drive, and we will also need space for downloading some additional files, so please make sure you have enough space.
 
 We have prepared everything into a Makefile. To create the conda environment and activate it, try to execute the following command in the folder where you put the code:
 
