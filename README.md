@@ -42,4 +42,4 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GNU GENERAL PUBLIC LICENSE, V.3](LICENSE)
