@@ -41,7 +41,8 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 - 
 
 ## Authors
-- [Mario Tormo](https://github.com/mt0rm0)
+- [Mario Tormo Romero](https://github.com/mt0rm0)
+- [Joaquin Gomez Prats](https://github.com/slovanos)
 
 ## License
 
