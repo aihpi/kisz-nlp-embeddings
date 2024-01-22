@@ -34,6 +34,8 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 ## Roadmap
 - Adding references
 - Improving and expanding test suite
+- Installation instructions with venv and pip
+- 
 
 ## Acknowledgements
 - 
