@@ -16,7 +16,7 @@ We will cover the following topics:
 
 The workshop is designed to be as practical as possible. All the necessary theoretical background that could be needed has been covered in a comprehensive course, available online for your convenience. You can find the video here:
 
-> [Understanding Embeddings for Natural Language Processing - OpenHPI](https://open.hpi.de/courses/embeddingsfornlp-kisz2023)
+[Understanding Embeddings for Natural Language Processing - OpenHPI](https://open.hpi.de/courses/embeddingsfornlp-kisz2023)
 
 ## Installation
 
@@ -32,6 +32,9 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 
 ## Roadmap
+- Adding references
+- Improving and expanding test suite
+- Installation instructions with venv and pip
 - 
 
 ## Acknowledgements
@@ -42,4 +45,4 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[GNU GENERAL PUBLIC LICENSE, V.3](LICENSE)
