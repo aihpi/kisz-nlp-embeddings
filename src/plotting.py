@@ -346,8 +346,6 @@ def visualize_embeddings(words: list[str], embeds: pd.DataFrame, query_array: np
         
         query_df = pd.DataFrame(query_array, columns=['UMAP1', 'UMAP2'])
         words_df = pd.concat([words_df, query_df], ignore_index=True)
-        print(words_df)
-
 
     # Set up Seaborn with a color palette
     sns.set(style="whitegrid", palette="tab10")
