@@ -7,7 +7,7 @@ assignees: mt0rm0
 
 ---
 
-What'S the background of the content change request?**.
+What's the background of the content change request?**.
 A clear and concise description of why do you want to change the content.
 
 **Describe the content you'd like**
