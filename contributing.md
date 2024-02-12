@@ -6,10 +6,10 @@ Thank you for considering contributing! We appreciate your efforts to make this 
 
 ### 1. Questions
 
-If you have questions related to the workshop, code, or any other aspect, please follow these steps:
+If you have questions related to the workshop, code, or any other aspect, you can check the Discussions:
 
 1. Check existing issues and discussions to see if your question has been addressed.
-2. If not, open a new issue using the "Question" template.
+2. If not, open a new discussion.
 3. Clearly state your question, providing as much detail as possible.
 4. Be patient and respectful while waiting for a response from the community or our team.
 
