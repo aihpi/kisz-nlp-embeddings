@@ -1,5 +1,5 @@
 ---
-name: Change content template
+name: Change content
 about: Propose changes to the content
 title: "[CONTENT CHANGE]"
 labels: content change
