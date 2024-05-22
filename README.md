@@ -62,6 +62,10 @@ Please adhere to this project's [`code of conduct`](CODE_OF_CONDUCT.md).
 - Installation inscructions with venv and pip
 - 2D UMAP Embeddings from Word2Vec model
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 44ce5bda080b2ac51eb779db9f048d2f3013c1f0
 ## Authors
 - [Mario Tormo Romero](https://github.com/mt0rm0)
 - [Joaquin Gomez Prats](https://github.com/slovanos)
