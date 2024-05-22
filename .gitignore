@@ -6,6 +6,7 @@
 # Environments
 envs/*
 !envs/*.yml
+!envs/*.txt
 
 # Python byte-code files
 __pycache__/
