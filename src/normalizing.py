@@ -11,37 +11,41 @@ from nltk.tokenize import word_tokenize
 
 class Tokenizer(ABC):
     """
-    Abstract base class for tokenizers. Subclasses must implement the 'model' property
-    and the 'tokenize' method to provide specific tokenization functionality.
+    Abstract base class for tokenizers. Subclasses must implement the 'model'
+    property and the 'tokenize' method to provide specific tokenization
+    functionality.
 
     Attributes:
     - None
 
     Methods:
     - model (property):
-        This property should return the specific tokenizer model or configuration used by the subclass.
-        Subclasses must implement this property.
+        This property should return the specific tokenizer model or
+        configuration used by the subclass. Subclasses must implement this
+        property.
 
     - tokenize(text: str) -> None:
-        Tokenizes the input text according to the tokenizer's model or configuration.
-        Subclasses must implement this method.
+        Tokenizes the input text according to the tokenizer's model or
+        configuration. Subclasses must implement this method.
 
     """
+
     @property
     @abstractmethod
     def model(self):
         """
-        Property that should return the specific tokenizer model or configuration used by the subclass.
-        Subclasses must implement this property.
+        Property that should return the specific tokenizer model or
+        configuration used by the subclass. Subclasses must implement this
+        property.
         """
         raise NotImplementedError("Subclasses must implement the 'model' property.")
 
     @abstractmethod
-    def tokenize(self, text:str) -> None:
+    def tokenize(self, text: str) -> None:
         """
         Tokenizes the input text according to the tokenizer's model or configuration.
         Subclasses must implement this method.
-        
+
         :param text: The input text to tokenize.
         """
         raise NotImplementedError("Subclasses must implement the 'tokenize' method.")
@@ -76,21 +80,21 @@ class SimpleTokenizer(Tokenizer):
         """
         return self._model
 
-    def tokenize(self, text:str):
+    def tokenize(self, text: str):
         """
         Tokenizes the input text by splitting it based on whitespace. It also replaces newline
         escape characters with spaces and gets rid of commas and dots, and removes empty tokens.
-        
+
         :param text: The input text to tokenize.
         :return: A list of tokens obtained by making some transformations and splitting the
         input text.
         """
         if isinstance(text, str):
-            output = text.replace('\n', ' ')
-            output = output.replace('.', '')
-            output = output.replace(',', '')
+            output = text.replace("\n", " ")
+            output = output.replace(".", "")
+            output = output.replace(",", "")
             tokens = output.split()
-            tokens = [string for string in tokens if string != '']
+            tokens = [string for string in tokens if string != ""]
             return tokens
         else:
             return []
@@ -107,7 +111,8 @@ class SpaCyTokenizer(Tokenizer):
     Methods:
     - __init__(size: str = 'sm'):
         Initializes the SpaCyTokenizer with the specified model size.
-        :param size: The size of the SpaCy model ('sm' for small (17Mb), 'md' for medium (45Mb), or 'lg' for large (780Mb)).
+        :param size: The size of the SpaCy model ('sm' for small (17Mb), 'md' for medium (45Mb), or 'lg'
+            for large (780Mb)).
 
     - model (property):
         This property returns the specific SpaCy model used by the class.
@@ -127,16 +132,16 @@ class SpaCyTokenizer(Tokenizer):
 
     """
 
-    def __init__(self, size: str='sm'):
+    def __init__(self, size: str = "sm"):
         """
         Initializes the SpaCyTokenizer with the specified model size.
         If the specified model is not installed, it will be downloaded.
         :param size: The size of the SpaCy model ('sm' for small, 'md' for medium, or 'lg' for large).
         """
-        if not spacy.util.is_package(f'en_core_web_{size}'):
-            spacy.cli.download(f'en_core_web_{size}')
+        if not spacy.util.is_package(f"en_core_web_{size}"):
+            spacy.cli.download(f"en_core_web_{size}")
 
-        self._model = spacy.load(f'en_core_web_{size}')
+        self._model = spacy.load(f"en_core_web_{size}")
 
     @property
     def model(self):
@@ -145,30 +150,30 @@ class SpaCyTokenizer(Tokenizer):
         """
         return self._model.__class__
 
-    def tokenize(self, text:str) -> list[str]:
+    def tokenize(self, text: str) -> list[str]:
         """
         Tokenizes the input text using the SpaCy model.
         :param text: The input text to tokenize.
         :return: A list of tokens obtained from the input text.
         """
         if isinstance(text, str):
-            string = text.replace('\n', ' ')
+            string = text.replace("\n", " ")
             doc = self._model(string)
-            return [token.text for token in doc if ' ' not in token.text]
+            return [token.text for token in doc if " " not in token.text]
         else:
             return []
-        
-    def lemmatize(self, text:str) -> list[str]:
+
+    def lemmatize(self, text: str) -> list[str]:
         """
         Lemmatizes the input text using the SpaCy model.
         :param text: The input text to lemmatize.
         :return: A list of lemmatized tokens obtained from the input text.
         """
         if isinstance(text, str):
-            string = text.replace('\n', ' ')
+            string = text.replace("\n", " ")
             doc = self._model(string)
-            return [token.lemma_ for token in doc if ' ' not in token.lemma_]
-        
+            return [token.lemma_ for token in doc if " " not in token.lemma_]
+
     def pipeline(self) -> list[str]:
         """
         Returns the names of the processing pipeline components used in the SpaCy model.
@@ -203,10 +208,15 @@ class NLTKTokenizer(Tokenizer):
         If the model is not found, it will be downloaded.
         """
         try:
-            nltk.data.find('tokenizers/punkt')
+            nltk.data.find("tokenizers/punkt")
         except LookupError:
-            nltk.download('punkt')
-            
+            nltk.download("punkt")
+
+        try:
+            nltk.data.find("tokenizers/punkt_tab")
+        except LookupError:
+            nltk.download("punkt_tab")
+
         self._model = word_tokenize
 
     @property
@@ -216,20 +226,28 @@ class NLTKTokenizer(Tokenizer):
         """
         return self._model.__name__
 
-    def tokenize(self, text:str) -> list[str]:
+    def tokenize(self, text: str) -> list[str]:
         """
         Tokenizes the input text using the NLTK tokenizer.
         :param text: The input text to tokenize.
         :return: A list of tokens obtained from the input text.
         """
         if isinstance(text, str):
-            string = text.replace('\n', ' ')
+            string = text.replace("\n", " ")
             return self._model(string)
         else:
             return []
 
-def normalize(text: str, tkn: Tokenizer, lemma: bool = False, stop_words: bool = True,
-              punct_signs: bool = False, stemmer: Optional[str] = None, case_folding: bool = True):
+
+def normalize(
+    text: str,
+    tkn: Tokenizer,
+    lemma: bool = False,
+    stop_words: bool = True,
+    punct_signs: bool = False,
+    stemmer: Optional[str] = None,
+    case_folding: bool = True,
+):
     """
     Normalize a given text using specified tokenization and text processing techniques.
     It also creates a dictionary with the options used for creating the tokens
@@ -250,11 +268,11 @@ def normalize(text: str, tkn: Tokenizer, lemma: bool = False, stop_words: bool =
     """
     args = dict(locals())
     parameters = {}
-    parameters['tokenizer'] = args['tkn'].__class__.__name__
-    args.pop('text', None)
-    args.pop('tkn', None)
-    parameters['args'] = args
-    
+    parameters["tokenizer"] = args["tkn"].__class__.__name__
+    args.pop("text", None)
+    args.pop("tkn", None)
+    parameters["args"] = args
+
     # Apply the tokenizer to the text
     if lemma & isinstance(tkn, SpaCyTokenizer):
         tokens = tkn.lemmatize(text)
@@ -280,6 +298,7 @@ def normalize(text: str, tkn: Tokenizer, lemma: bool = False, stop_words: bool =
 
     return parameters, tokens
 
+
 def df_pipeline(df: pd.DataFrame, tkn: Tokenizer, **kwargs) -> set[dict, pd.DataFrame]:
     """
     Process a DataFrame by applying a tokenization pipeline to a specified column.
@@ -300,11 +319,12 @@ def df_pipeline(df: pd.DataFrame, tkn: Tokenizer, **kwargs) -> set[dict, pd.Data
     1       Text 2      processed_tokens_2
     2       Text 3      processed_tokens_3
     """
-    df.loc[:, 'tokens'] = df.descriptor.map(lambda x: normalize(x, tkn, **kwargs))
+    df.loc[:, "tokens"] = df.descriptor.map(lambda x: normalize(x, tkn, **kwargs))
     params = df.tokens[0][0]
-    df.loc[:, 'tokens'] = df.tokens.map(lambda x: x[1])
+    df.loc[:, "tokens"] = df.tokens.map(lambda x: x[1])
 
     return params, df
 
-if __name__=="__main__":
+
+if __name__ == "__main__":
     pass

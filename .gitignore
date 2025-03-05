@@ -4,9 +4,8 @@
 .vscode/settings.json
 
 # Environments
-envs/*
-!envs/*.yml
-!envs/*.txt
+.venv
+temp
 
 # Python byte-code files
 __pycache__/
