@@ -21,30 +21,30 @@ In this repository, you'll find code and resources for a group of workshops desi
 - [Metrics](./notebooks/1.02_Metrics.ipynb)
 - [Visualization tools](./notebooks/1.03_Visualization.ipynb)
 
-### Session 2 - Statistical Models
+### Session 2 - Statistical models (BoW & TF-IDF)
 
 - [Text normalization](./notebooks/2.01_Text_Normalization.ipynb)
 - [Bag of Words](./notebooks/2.02_BoW.ipynb)
 - [TF-IDF](./notebooks/2.03_TF-IDF.ipynb)
 
-### Session 2
+### Session 3 - Word2Vec models from scratch
 
 - [Using Word2Vec](./notebooks/3.01_Word2Vec.ipynb)
-- [Word2Vec from scratch](./notebooks/3.05_Word2Vec_from_scratch.ipynb)
+- [Word2Vec from scratch](./notebooks/3.02_Word2Vec_from_scratch.ipynb)
 
-### Session 3
+### Session 4 - Glove and other static embedding models
 
-- [GloVe](./notebooks/3.02_GloVe.ipynb)
-- [FastText](./notebooks/3.03_FastText.ipynb)
-- [Doc2Vec](./notebooks/3.04_Doc2Vec.ipynb)
+- [GloVe](./notebooks/4.01_GloVe.ipynb)
+- [FastText](./notebooks/4.02_FastText.ipynb)
+- [Doc2Vec](./notebooks/4.03_Doc2Vec.ipynb)
 
-### Session 4
+### Session 5 - Contextualized Embeddings
 
-- [Embeddings with Bert](./notebooks/4.01_Embeddings%20with%20Bert.ipynb)
-- [Sentence transfvormers](./notebooks/4.02_Sentence_transformers.ipynb)
-- [Indexing the embeddings](./notebooks/4.03_Indexing%20the%20embeddings.ipynb)
+- [Embeddings with Bert](./notebooks/5.01_Embeddings%20with%20Bert.ipynb)
+- [Sentence transfvormers](./notebooks/5.02_Sentence_transformers.ipynb)
+- [Indexing the embeddings](./notebooks/5.03_Indexing%20the%20embeddings.ipynb)
 
-### Session 5
+### Session 6
 
 - Vector databases
 
