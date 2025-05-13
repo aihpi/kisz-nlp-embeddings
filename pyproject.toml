@@ -24,8 +24,20 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-bow = [
+gensim = [
     "gensim>=4.3.2",
+]
+spark-nlp = [
+    "pyspark>=3.5.5",
+    "spark-nlp>=5.5.3",
+]
+bert = [
+    "torch>=2.7.0",
+    "transformers>=4.51.3",
+]
+sbert = [
+    "sentence-transformers>=4.1.0",
+    "torch>=2.7.0",
 ]
 
 [tool.uv.sources]
