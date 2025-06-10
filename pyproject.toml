@@ -1,3 +1,57 @@
+<<<<<<< HEAD
+[project]
+name = "kisz-nlp-embeddings"
+version = "0.1.0"
+description = "AMaterials for the 'Working with embeddings' workshops"
+readme = "README.md"
+requires-python = "==3.10.6"
+dependencies = [
+    "datasets>=3.3.2",
+    "en-core-web-sm",
+    "ipykernel>=6.29.5",
+    "ipywidgets>=8.1.5",
+    "nbformat>=4.2.0",
+    "nltk>=3.9.1",
+    "numpy==1.26",
+    "pandas>=2.2.3",
+    "pip>=25.0.1",
+    "plotly>=6.0.0",
+    "pytest>=8.3.5",
+    "scikit-learn>=1.6.1",
+    "scipy==1.10.1",
+    "seaborn>=0.13.2",
+    "spacy>=3.8.4",
+    "umap>=0.1.1",
+]
+
+[project.optional-dependencies]
+gensim = [
+    "gensim>=4.3.2",
+]
+spark-nlp = [
+    "pyspark>=3.5.5",
+    "spark-nlp>=5.5.3",
+]
+bert = [
+    "torch>=2.7.0",
+    "transformers>=4.51.3",
+]
+sbert = [
+    "sentence-transformers>=4.1.0",
+    "torch>=2.7.0",
+]
+qdrant = [
+    "qdrant-client>=1.14.2",
+    "sentence-transformers>=4.1.0",
+]
+chroma = [
+    "chromadb>=1.0.12",
+    "sentence-transformers>=4.1.0",
+]
+
+[tool.uv.sources]
+en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+=======
 [project]
 name = "kisz-nlp-embeddings"
 version = "0.1.0"
@@ -42,3 +96,4 @@ sbert = [
 
 [tool.uv.sources]
 en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
+>>>>>>> fd5af367192a82f7794879f688242c98c66e78c0
